@@ -1,0 +1,9 @@
+1. express project name
+1. sudo npm install
+2. check with nodemon
+3. resolve errors if any (it may ask for express to install)
+4. sudo install sequelize --save
+5. sudo install mysql --save
+6. run nodemon check for errors
+7. 
+

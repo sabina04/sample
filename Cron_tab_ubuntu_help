@@ -1,0 +1,26 @@
+to set up cron
+crontab -e
+
+in opened file
+
+=> Doing php related task
+*/1 * * * * /opt/lampp/bin/php -q /opt/lampp/htdocs/test.php
+This will do whatever written in test.php
+
+=> simple append data 
+*/1 * * * * echo "test1" >> /opt/lampp/htdocs/test.php
+
+=> To stop cron
+sudo service cron stop
+
+=> To check cron status
+sudo service cron status
+
+=> To start cron
+sudo service cron start
+
+=> When there are multiple we servers like apache nginx.. and apache not start by command sudo /opt/lampp/lampp restart and give error XAMPP:  Another web server is already running, then use:
+ => sudo /etc/init.d/apache2 stop
+then use sudo /opt/lampp/lampp restart again
+
+=> grep (Global Regular Expression Print)

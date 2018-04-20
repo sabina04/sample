@@ -1,0 +1,39 @@
+sudo apt-get update
+sudo apt-get install nginx
+change the listen port ogf nginx if apache is also install
+To change teh port 
+sudo nano /etc/nginx/sites-available/default
+
+change 
+listen 80 default_server;
+listen [::]:80 default_server ipv6only=on;
+
+to
+listen 81 default_server;
+listen [::]:81 default_server ipv6only=on;
+
+after that 
+sudo service nginx restart
+if this fail run: 
+sudo nginx
+and restart nginx again with command :
+service sudo service nginx
+
+if get error [emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
+it means port nginx or some other process port 80(or whatever port you have added)
+to handle it run command
+sudo fuser -k 80/tcp
+sudo service nginx restart
+
+on browser check 
+localhost:81
+
+enable php steps
+=> sudo apt-get install php7.0-fpm
+=> sudo nano etc/php/7.0/fpm/php.ini (from here uncomment cgi.fix_pathinfo=1 and make it to cgi.fix_pathinfo=0)
+=> sudo service php7.0-fpm restart
+
+
+
+
+

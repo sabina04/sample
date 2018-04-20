@@ -1,0 +1,20 @@
+To chnage git commit username 
+
+ git config --global user.name (this will show the name register)
+ git config --global user.name "Sabina Khan" (this will change the name)
+ 
+ Steps
+ Go to project folder
+ check status === git status
+ create branch === git branch branchname
+ check branches === git branch
+ Go to particular branch === git checkout branchname
+ Add changes in that branch ==== git add .
+ Commit chnges in branch === git commit -m "Comment you want to add"
+ merge changes to master  === git merge branchname
+ commit chnage === git push origin master
+
+
+
+
+
